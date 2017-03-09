@@ -24,8 +24,8 @@
 {syntab:Colors}
 {synopt:{opt cmin(#)}} which value should get the lowest value for color.{p_end}
 {synopt:{opt cmax(#)}} which value should get the lowest value for color.{p_end}
-{synopt:{opt rgb_low(# # #)}} specify color low values of c.{p_end}
-{synopt:{opt rgb_high(# # #)}} specify color low values of c.{p_end}
+{synopt:{opt rgb_low(# # #)}} specify color low values of c. (default: red) {p_end}
+{synopt:{opt rgb_high(# # #)}} specify color high values of c. (default: blue) {p_end}
 
 {marker description}{...}
 {title:Description}
@@ -67,7 +67,7 @@ This example generates a data set of 3 variables and plots a colored scatter plo
 {title:Author}
 
 {pstd}
-Simon He√ü, Goethe University Frankfurt, ({browse "mailto:hess@econ.uni-frankfurt.de":hess@econ.uni-frankfurt.de}){p_end}
+Simon Heﬂ, Goethe University Frankfurt, ({browse "mailto:hess@econ.uni-frankfurt.de":hess@econ.uni-frankfurt.de}){p_end}
 
 {pstd}
 The latest version of colorscatter can always be obtained from {browse "https://github.com/simonheb/colorscatter"} or {browse "http://HessS.org"}.{p_end}
