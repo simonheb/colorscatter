@@ -1,6 +1,5 @@
 ﻿v 1.0.1
-d Simon H. Heß, Goethe University Frankfurt
-d Draw scatter plots with colors varying by the value of a thrid variable
+d Author: Simon H. Heß, Goethe University Frankfurt
 p colorscatter
 
 
