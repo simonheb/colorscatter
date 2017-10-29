@@ -1,12 +1,15 @@
+****changelog:
+* v1.0.1 by suggestion of  the symbol_opacity() option was added
 cap program drop colorscatter
-program define colorscatter 
-	syntax varlist(max=3)  [if] [in],[ keeplegend scatter_options(string) cmin(string) cmax(string) rgb_low(string) rgb_high(string) * ]
+program define colorscatter
+    version 11.0
+	syntax varlist(max=3)  [if] [in],[ keeplegend scatter_options(string) symbol_opacity(string) cmin(string) cmax(string) rgb_low(string) rgb_high(string) * ]
 	marksample touse
 	
 	tokenize `varlist'
 	local x "`1'"
 	local y "`2'"
-	local c  "`3'"
+	local c "`3'"
 	qui sum `c'
 	if "`cmin'"=="" {
 		local cmin=r(min)
@@ -40,7 +43,7 @@ program define colorscatter
 	foreach l of local levels {
 		local i = `i'+1
 		local gradient=`l'/255		
-		local command `command' (scatter `x' `y' if `cscaled'==`l' & `touse', mcolor("`: di round(`gradient'*`rl1' + (1-`gradient')*`rh1')' `: di round(`gradient'*`rl2' + (1-`gradient')*`rh2')' `: di round(`gradient'*`rl3' + (1-`gradient')*`rh3')'") `scatter_options')
+		local command `command' (scatter `x' `y' if `cscaled'==`l' & `touse', mcolor("`: di round(`gradient'*`rl1' + (1-`gradient')*`rh1')' `: di round(`gradient'*`rl2' + (1-`gradient')*`rh2')' `: di round(`gradient'*`rl3' + (1-`gradient')*`rh3')' `symbol_opacity'") `scatter_options')
 	}
 	
 	if ("`keeplegend'"=="") {

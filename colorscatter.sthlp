@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 0.0.1 08.03.2017}{...}
+{* *! version 1.0.1 29.10.2017}{...}
 
 {title:Title}
 
@@ -26,7 +26,7 @@
 {synopt:{opt cmax(#)}} which value should get the lowest value for color.{p_end}
 {synopt:{opt rgb_low(# # #)}} specify color low values of c. (default: red) {p_end}
 {synopt:{opt rgb_high(# # #)}} specify color high values of c. (default: blue) {p_end}
-
+{synopt:{opt symbol_opacity(#%)}} specify opacity. (default: blue) {p_end}
 {marker description}{...}
 {title:Description}
 
@@ -63,7 +63,10 @@ This example generates a data set of 3 variables and plots a colored scatter plo
 {help twoway},
 {help twoway scatter},
 
-
+{title:Acknowledgements}
+Eric Melse suggested and implemented the symbol_opacity option 
+{pstd}
+{p_end}
 {title:Author}
 
 {pstd}
