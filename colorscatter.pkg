@@ -1,5 +1,5 @@
-﻿v 1.0.3
+﻿v 1.0.1
 d colorscatter - draw scatterplots with marker-color indicating values of a third variable
-d Simon H. Heß, Goethe University Frankfurt, Germany
+d Author: Simon H. Heß, Goethe University Frankfurt, Germany
 f colorscatter.ado
 f colorscatter.sthlp
