@@ -1,0 +1,3 @@
+﻿v 1.0.1
+d Simon H. Heß, Goethe University Frankfurt
+p colorscatter - Draw scatter plots with colors varying by the value of a thrid variable

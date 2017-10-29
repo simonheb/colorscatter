@@ -1,3 +1,0 @@
-﻿v 1.0.1
-d Simon H. Heß, Goethe University Frankfurt
-p colorscatter- Randomization inference with Stata
