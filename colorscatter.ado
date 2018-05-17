@@ -18,7 +18,7 @@ program define colorscatter
 		local cmax=r(max)
 	}
 	if "`symbol_opacity'"=="" {
-		local rgb_low  1
+		local symbol_opacity  1
 	}
 	if "`rgb_low'"=="" {
 		local rgb_low  0 0 255
