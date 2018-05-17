@@ -40,7 +40,7 @@ program define colorscatter
 	qui replace `cscaled'=0 if `cscaled' <0
 	qui replace `cscaled'=255 if `cscaled'>255 & ! missing(`cscaled') 
 	local command tw 
-	levelsof `cscaled' if `touse', local(levels) 
+	qui levelsof `cscaled' if `touse', local(levels) 
 	
 	local i 0
 	local legend_entry 
@@ -51,8 +51,8 @@ program define colorscatter
 		local command `command' (scatter `x' `y' if `cscaled'==`l' & `touse', mcolor("`: di round(`gradient'*`rl1' + (1-`gradient')*`rh1')' `: di round(`gradient'*`rl2' + (1-`gradient')*`rh2')' `: di round(`gradient'*`rl3' + (1-`gradient')*`rh3')' `symbol_opacity'") `scatter_options')
 		local label ""
 		if `i'==1 | `i'==`last' {
-			sum `c' if `cscaled'==`l' & `touse'
-			di `r(N)'
+			qui sum `c' if `cscaled'==`l' & `touse'
+			qui di `r(N)'
 			local label `: di %12.2g `r(mean)''
 		}
 		local legend_entry `legend_entry' `i' "`label'"
