@@ -1,5 +1,6 @@
 ****changelog:
-* v1.0.1 by suggestion of  the symbol_opacity() option was added
+* v1.0.2 bugfix
+* v1.0.1 the symbol_opacity() option was added
 cap program drop colorscatter
 program define colorscatter
     version 11.0
