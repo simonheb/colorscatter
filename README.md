@@ -1,5 +1,5 @@
 ﻿# colorscatter
-Stata package to draw scatterplots with varying marker colors.
+Stata code to draw scatterplots with varying marker colors.
 
 ## Installation
 To obtain the latest version through github, from the main window in Stata, run:
@@ -11,6 +11,7 @@ If the download from within Stata fails (e.g. because you are behind a firewall)
  - https://raw.githubusercontent.com/simonheb/colorscatter/master/colorscatter.sthlp
 
 ## Changelog
+ - **1.0.2** Emilia Tjernström made me aware of a bug I introduced in Version 1.0.1
  - **1.0.1** Eric Melse suggested and implemented an option to add opacity.
 
 ## Discussion
