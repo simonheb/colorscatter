@@ -1,10 +1,11 @@
 ****changelog:
+* v1.0.3 added option to add other twoway plots
 * v1.0.2 bugfix
 * v1.0.1 the symbol_opacity() option was added
 cap program drop colorscatter
 program define colorscatter
     version 11.0
-	syntax varlist(max=3)  [if] [in],[ keeplegend scatter_options(string) symbol_opacity(string) cmin(string) cmax(string) rgb_low(string) rgb_high(string) * ]
+	syntax varlist(max=3)  [if] [in],[ keeplegend scatter_options(string) symbol_opacity(string) cmin(string) cmax(string) rgb_low(string) rgb_high(string) tw_pre(string) tw_post(string)  * ]
 	marksample touse
 	
 	tokenize `varlist'
@@ -40,7 +41,7 @@ program define colorscatter
 	
 	qui replace `cscaled'=0 if `cscaled' <0
 	qui replace `cscaled'=255 if `cscaled'>255 & ! missing(`cscaled') 
-	local command tw 
+	local command tw (`tw_pre')
 	qui levelsof `cscaled' if `touse', local(levels) 
 	
 	local i 0
@@ -58,12 +59,13 @@ program define colorscatter
 		}
 		local legend_entry `legend_entry' `i' "`label'"
 	}
-	
+	local command `command' (`tw_post')
+
 	if ("`keeplegend'"=="") {
 		`command', `options' legend(order(`legend_entry') col(1) symplacement(right)  position(3))
 	}
 	else {
 		`command', `options' 
 	}
-	di `"`legend'"'
+
 end
