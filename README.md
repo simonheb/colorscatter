@@ -11,6 +11,7 @@ If the download from within Stata fails (e.g. because you are behind a firewall)
  - https://raw.githubusercontent.com/simonheb/colorscatter/master/colorscatter.sthlp
 
 ## Changelog
+ - **1.0.3** Added options (tw_pre and tw_post) to integrate other twoway graph with colorscatter
  - **1.0.2** Emilia Tjernström made me aware of a bug I introduced in Version 1.0.1
  - **1.0.1** Eric Melse suggested and implemented an option to add opacity.
 
