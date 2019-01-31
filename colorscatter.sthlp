@@ -72,10 +72,10 @@ Eric Melse suggested and implemented the symbol_opacity option
 {title:Author}
 
 {pstd}
-Simon Heß, Goethe University Frankfurt, ({browse "mailto:hess@econ.uni-frankfurt.de":hess@econ.uni-frankfurt.de}){p_end}
+Simon Heß, Goethe University Frankfurt.{p_end}
 
 {pstd}
 The latest version of colorscatter can always be obtained from {browse "https://github.com/simonheb/colorscatter"} or {browse "http://HessS.org"}.{p_end}
 
 {pstd}
-I am happy to receive comments and suggestions regarding bugs or possibilites for improvements/extensions.{p_end}
+I am happy to receive comments and suggestions regarding bugs or ideas for improvements/extensions via {browse "https://github.com/simonheb/colorscatter/issues"}.{p_end}
