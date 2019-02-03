@@ -1,4 +1,4 @@
-﻿# colorscatter
+# colorscatter
 Stata code to draw scatterplots with varying marker colors.
 
 ## Installation
