@@ -1,4 +1,4 @@
-﻿v 3
+v 3
 d Author: Simon Heß, Goethe University Frankfurt
 p colorscatter Draw scatterplots where the color varies with a third variable
 
