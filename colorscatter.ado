@@ -20,7 +20,7 @@ program define colorscatter
 		local cmax=r(max)
 	}
 	if "`symbol_opacity'"=="" {
-		local symbol_opacity  1
+		local symbol_opacity  100
 	}
 	if "`rgb_low'"=="" {
 		local rgb_low  0 0 255
@@ -50,7 +50,7 @@ program define colorscatter
 	foreach l of local levels {
 		local i = `i'+1
 		local gradient=`l'/255		
-		local command `command' (scatter `x' `y' if `cscaled'==`l' & `touse', mcolor("`: di round(`gradient'*`rl1' + (1-`gradient')*`rh1')' `: di round(`gradient'*`rl2' + (1-`gradient')*`rh2')' `: di round(`gradient'*`rl3' + (1-`gradient')*`rh3')' `symbol_opacity'") `scatter_options')
+		local command `command' (scatter `x' `y' if `cscaled'==`l' & `touse', mcolor("`: di round(`gradient'*`rl1' + (1-`gradient')*`rh1')' `: di round(`gradient'*`rl2' + (1-`gradient')*`rh2')' `: di round(`gradient'*`rl3' + (1-`gradient')*`rh3')'%`symbol_opacity'") `scatter_options')
 		local label ""
 		if `i'==1 | `i'==`last' {
 			qui sum `c' if `cscaled'==`l' & `touse'
