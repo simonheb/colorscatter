@@ -1,4 +1,5 @@
 ****changelog:
+* v1.0.4 bugfix
 * v1.0.3 added option to add other twoway plots
 * v1.0.2 bugfix
 * v1.0.1 the symbol_opacity() option was added
