@@ -42,7 +42,7 @@ program define colorscatter
 	
 	qui replace `cscaled'=0 if `cscaled' <0
 	qui replace `cscaled'=255 if `cscaled'>255 & ! missing(`cscaled') 
-	local command tw (`tw_pre')
+	local command tw `tw_pre'
 	qui levelsof `cscaled' if `touse', local(levels) 
 	
 	local i 0
@@ -60,7 +60,7 @@ program define colorscatter
 		}
 		local legend_entry `legend_entry' `i' "`label'"
 	}
-	local command `command' (`tw_post')
+	local command `command' `tw_post'
 
 	if ("`keeplegend'"=="") {
 		`command', `options' legend(order(`legend_entry') col(1) symplacement(right)  position(3))
