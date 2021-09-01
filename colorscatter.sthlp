@@ -27,8 +27,8 @@
 {synopt:{opt rgb_low(# # #)}} specify color low values of c. (default: red) {p_end}
 {synopt:{opt rgb_high(# # #)}} specify color high values of c. (default: blue) {p_end}
 {synopt:{opt symbol_opacity(#%)}} specify opacity. (default: blue) {p_end}
-{synopt:{opt tw_pre(twoway graph)}} draw another twoway graph underneath.  {p_end}
-{synopt:{opt tw_post(twoway graph)}} draw another twoway graph on top. {p_end}
+{synopt:{opt tw_pre(twoway graph)}} draw another twoway graph underneath (should be enclosed in parentheses, like "(scatter xy)" ).  {p_end}
+{synopt:{opt tw_post(twoway graph)}} draw another twoway graph on top (should be enclosed in parentheses). {p_end}
 {marker description}{...}
 {title:Description}
 
