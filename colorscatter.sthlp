@@ -56,7 +56,7 @@ This example generates a data set of 3 variables and plots a colored scatter plo
 {stata `"gen c = min(abs(x),abs(y))"'}
 {p_end}
 {phang}
-{stata `"colorscatter x y c, scatter_options(msymb(Oh)) title("Twowaytitle") rgb_low(255 0 0) rgb_high(0 255 0) tw_pre(line x y, lc(gray))"'}
+{stata `"colorscatter x y c, scatter_options(msymb(Oh)) title("Twowaytitle") rgb_low(255 0 0) rgb_high(0 255 0) tw_pre((line x y, lc(gray)))"'}
 {p_end}
 
 {title:See also}
